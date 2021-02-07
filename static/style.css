@@ -1,0 +1,15 @@
+body{
+    background-color: #b5ffee;
+}
+
+.container{
+    background-color: #b5ffee;
+    font-family: 'Courier New', monospace;
+    margin: 0 auto;
+}
+
+.info{
+     display: flex;
+     justify-content: center;
+   
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href={{ url_for( 'static', filename='style.css' ) }} />
+</head>
+
+<body>
+    
+    <div class = "container">
+        <h1 class = "info">{{ song_name }} </h5>
+        <h2 class = "info">By {{ artist_name }}</h5>
+        <div class = info>
+            <img src= {{song_img}} width="25%" height="25%">
+        </div>
+        
+        <br><br>
+        {% if song_preview == None %}
+            <h3 class = "info">No Song Preview</h5>
+        {% else %}
+            <div class = "info">
+                <audio controls> 
+                    <source src="{{ song_preview }}"  type="audio/mp3">
+                </audio>
+            </div>
+        {% endif %}
+        
+    </div>
+
+</body>
+
+</html>
