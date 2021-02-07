@@ -1,5 +1,6 @@
 import requests
 import os
+import random
 from dotenv import load_dotenv, find_dotenv
 
 
@@ -10,8 +11,7 @@ AUTH_URL = 'https://accounts.spotify.com/api/token'
 CLIENT_ID = os.getenv('CLIENT_ID')
 CLIENT_SECRET =  os.getenv('CLIENT_SECRET')
 
-# artist_id = '5qEtLvXzYdv0G7c7rR6irX'
-
+# This method aquires the credential token from the Client ID and Secret
 def get_token():
     
     auth_response = requests.post(AUTH_URL, {
@@ -28,7 +28,7 @@ def get_token():
     
     return access_token
 
-
+# get_info calls get_token and makes the API call with the artist ID provided
 def get_info(artist_id):
     
     access_token = get_token()
@@ -43,12 +43,15 @@ def get_info(artist_id):
 
     data = data.json()
 
-
-    song_name = data['tracks'][0]['name']
-    artist_name = data['tracks'][0]['artists'][0]['name']
-    song_img = data['tracks'][0]['album']['images'][0]['url']
-    song_preview = data['tracks'][0]['preview_url']
+    # We chose a random song from the artist's top tracks
+    rand = random.randint(0, len(data['tracks']) - 1)
+    
+    song_name = data['tracks'][rand]['name']
+    artist_name = data['tracks'][rand]['artists'][0]['name']
+    song_img = data['tracks'][rand]['album']['images'][0]['url']
+    song_preview = data['tracks'][rand]['preview_url']
 
     info = [song_name, artist_name, song_img, song_preview]
     
+    # Returns a list containing all the info.
     return info
