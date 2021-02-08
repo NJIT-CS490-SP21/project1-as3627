@@ -25,3 +25,6 @@ Note: if for some reason these commands don't work, put `sudo` in front of each 
 1. Run command in terminal with `python app.py`
 2. Preview the web page in browser '/'
 
+## Current Known (or Potential) Issues:
+1. If the api crashes, or hit its limit for the day, I have no idea what will happen to the app itself. This error has not occured (yet). To prevent this, I will be adding in dummy data in the future that the app can use as default in the case the api call fails.
+2. Some songs have multiple artists, but for those songs only 1 artist appears. This could be fixed by checking if there are multiple artists from the json and restructuring the code to pull them out. 
