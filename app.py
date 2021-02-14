@@ -29,6 +29,7 @@ def hello_world():
        artist_name=info[1],
        song_img=info[2],
        song_preview=info[3],
+       spotify_url=info[4],
        lyrics_link = lyrics,
     )
 # Runs the app

@@ -50,8 +50,9 @@ def get_info(artist_id):
     artist_name = data['tracks'][rand]['artists'][0]['name']
     song_img = data['tracks'][rand]['album']['images'][0]['url']
     song_preview = data['tracks'][rand]['preview_url']
-
-    info = [song_name, artist_name, song_img, song_preview]
+    spotify_url = data['tracks'][rand]['external_urls']['spotify']
+    
+    info = [song_name, artist_name, song_img, song_preview, spotify_url]
     
     # Returns a list containing all the info.
     return info
