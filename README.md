@@ -8,6 +8,11 @@ More information will be added to this later.
 2. Once you make an account, head on over to the Dashboard and hit `Create an App`. Fill out the information on there.
 3. After you finish filling in the information for creating the app, make note of the `Client ID` and `Client Secret`, we'll need them later.
 
+## Sign up for a Genius API Account
+1. You can sign up for a free Genius account on this link here: [https://genius.com/signup_or_login](https://genius.com/signup_or_login)
+2. Once you make an account, head over to the [https://genius.com/api-clients](Api Clients page) and hit `New API  Client` and fill in the information.
+3. Once you fill in the information hit `Generate Access Token` and make note of this `Access Token`, we'll need it later.
+
 
 ## Install Requirements (if you don't already have them)
 Note: if for some reason these commands don't work, put `sudo` in front of each command and then try running it.
@@ -16,9 +21,10 @@ Note: if for some reason these commands don't work, put `sudo` in front of each 
 3. `pip install Flask`
 
 ## Setup
-1. Create a `.env` file in your project directory
-2. Add the `Client ID` and `Client Secret` variables inside here, with the lines: `export CLIENT_ID={YOUR_ID}` and `export CLIENT_SECRET={YOUR_SECRET}`
-3. Inside `app.py` add your favorite artist's Artist ID inside the `ids` list on line 17. To find out how to get Artist IDs, check this link out: 
+1. Create a `.env` file in your project directory.
+2. Add the Spotify `Client ID` and `Client Secret` variables inside the `.env` file, with the lines: `export CLIENT_ID = {YOUR_ID}` and `export CLIENT_SECRET = {YOUR_SECRET}`.
+3. Add the Genius `Access Token` variable in the `.env` file, with the lines: `export GENIUS_KEY = {YOUR KEY}`.
+4. Inside `app.py` add your favorite artist's Artist ID inside the `ids` list on line 17. To find out how to get Artist IDs, check this link out: 
 [https://support.tunecore.com/hc/en-us/articles/360040325651-How-to-Find-my-Spotify-Artist-ID](https://support.tunecore.com/hc/en-us/articles/360040325651-How-to-Find-my-Spotify-Artist-ID)
 
 ## Running the Application

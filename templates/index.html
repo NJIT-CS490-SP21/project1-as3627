@@ -25,6 +25,16 @@
             </div>
         {% endif %}
         
+        <br>
+        <div class = "info">
+            {% if lyrics_link == None %}
+                <h3 class = "info">Lyrics Unavailable</h3>
+            {% else %}
+            
+                <a href= {{lyrics_link}} target="_blank">Click here to get the lyrics!</a>
+            
+            {% endif %}
+        </div>
     </div>
 
 </body>
