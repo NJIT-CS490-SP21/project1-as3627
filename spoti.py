@@ -47,11 +47,18 @@ def get_info(artist_id):
     rand = random.randint(0, len(data['tracks']) - 1)
     
     song_name = data['tracks'][rand]['name']
-    artist_name = data['tracks'][rand]['artists'][0]['name']
+    
+    # Handling multiple artists for one song
+    artist_name = []
+    total = len(data['tracks'][rand]['artists'])
+    for i in range(total):
+        artist_name.append(data['tracks'][rand]['artists'][i]['name'])
+    
+    
     song_img = data['tracks'][rand]['album']['images'][0]['url']
     song_preview = data['tracks'][rand]['preview_url']
     spotify_url = data['tracks'][rand]['external_urls']['spotify']
-    
+
     info = [song_name, artist_name, song_img, song_preview, spotify_url]
     
     # Returns a list containing all the info.

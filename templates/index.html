@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+    
+<title>Music Discovery by Deep</title>
 
 <head>
     <link rel="stylesheet" href={{ url_for( 'static', filename='style.css' ) }} />
@@ -9,7 +11,31 @@
     
     <div class = "container">
         <h1 class = "info">{{ song_name }} </h5>
-        <h2 class = "info">By {{ artist_name }}</h5>
+        <h2 class = "info">By
+        {% for i in range(total_artists) %}
+            {% if i == total_artists-1 %}
+                {{ artist_name[i] }}
+            {% else %}
+                {{ artist_name[i] }} |
+            {% endif %}
+        {% endfor %}
+        </h2>
+
+        <div class ="info">
+            <b><p>
+            {% if lyrics_link == None %}
+                    Lyrics Unavailable | <a class = "new_link" href= {{spotify_url}} target="_blank">Play on Spotify!</a> 
+
+            {% else %}
+                    <a class = "new_link" href = {{lyrics_link}} target="_blank">Click for Lyrics!</a>
+                    |
+                    <a class = new_link href= {{spotify_url}} target="_blank">Play on Spotify!</a>
+
+            {% endif %}
+            </p></b>
+        </div>
+
+        
         <div class = info>
             <img src= {{song_img}} width="25%" height="25%">
         </div>
@@ -26,24 +52,16 @@
         {% endif %}
         
         <br>
-        <div class = "info">
-            {% if lyrics_link == None %}
-                <h3 class = "info">Lyrics Unavailable</h3>
-            {% else %}
-            
-                <a href= {{lyrics_link}} target="_blank">Click here to get the lyrics!</a>
-            
-            {% endif %}
-        </div>
-        
-        <br>
-        
-        <div class = "info">
-            <a href= {{spotify_url}} target="_blank">Play on Spotify!</a>
-        </div>
         
     </div>
-
+    
+<!-- Ascii Dog
+           __
+      (___()'`; (woof)
+      /,    /`
+      \\"--\\
+ -->
+ 
 </body>
-
+    
 </html>

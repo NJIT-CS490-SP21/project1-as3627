@@ -11,7 +11,7 @@ More information will be added to this later.
 ## Sign up for a Genius API Account
 1. You can sign up for a free Genius account on this link here: [https://genius.com/signup_or_login](https://genius.com/signup_or_login)
 2. Once you make an account, head over to [https://genius.com/api-clients](https://genius.com/api-clients) and hit `New API  Client` and fill in the information.
-3. Once you fill in the information hit `Generate Access Token` and make note of this `Access Token`, we'll need it later.
+3. Once you fill in the information hit `Generate Access Token` and make note of this Access Token, we'll need it later.
 
 
 ## Install Requirements (if you don't already have them)
@@ -19,6 +19,7 @@ Note: if for some reason these commands don't work, put `sudo` in front of each 
 1. `pip install python-dotenv`
 2. `pip install requests`
 3. `pip install Flask`
+4. `npm install -g heroku`
 
 ## Setup
 1. Create a `.env` file in your project directory.
