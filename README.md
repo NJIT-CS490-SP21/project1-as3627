@@ -10,7 +10,7 @@ More information will be added to this later.
 
 ## Sign up for a Genius API Account
 1. You can sign up for a free Genius account on this link here: [https://genius.com/signup_or_login](https://genius.com/signup_or_login)
-2. Once you make an account, head over to the [https://genius.com/api-clients](Api Clients page) and hit `New API  Client` and fill in the information.
+2. Once you make an account, head over to [https://genius.com/api-clients](https://genius.com/api-clients) and hit `New API  Client` and fill in the information.
 3. Once you fill in the information hit `Generate Access Token` and make note of this `Access Token`, we'll need it later.
 
 
