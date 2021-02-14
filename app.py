@@ -20,7 +20,7 @@ def hello_world():
 
     # Pass the random index through to get info for a randomly chosen artist. 
     info = get_info(ids[idx])
-    
+
     return render_template(
         "index.html",
        song_name=info[0],
