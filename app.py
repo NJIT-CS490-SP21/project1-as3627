@@ -14,8 +14,8 @@ def hello_world():
     """ Returns root endpoint HTML """
     
     # These can be swapped out for any artist URI.
-    # The ones in this list are (in order): Arianna Grande, Dua Lipa, Sia
-    ids = ['66CXWjxzNUsdJxJ2JdwvnR', '6M2wZ9GZgrQXHCFfjv46we', '5WUlDfRSoLAfcVSX1WnrxN']
+    # The ones in this list are (in order): Arianna Grande, Dua Lipa, Sia, The Weeknd, Bruno Mars
+    ids = ['66CXWjxzNUsdJxJ2JdwvnR', '6M2wZ9GZgrQXHCFfjv46we', '5WUlDfRSoLAfcVSX1WnrxN', '1Xyo4u8uXC1ZmMpatF05PJ', '0du5cEVh5yTK9QJze8zA0C']
 
     idx = random.randint(0, len(ids) - 1)
 

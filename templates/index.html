@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     
-<title>Music Discovery by Deep</title>
+<title>Music Discovery by Deep</title> <!-- Note you can change the title -->
 
 <head>
     <link rel="stylesheet" href={{ url_for( 'static', filename='style.css' ) }} />
@@ -10,7 +10,7 @@
 <body>
     
     <div class = "container">
-        <h1 class = "info">{{ song_name }} </h5>
+        <h1 class = "info"><b>{{ song_name }}</b></h5>
         <h2 class = "info">By
         {% for i in range(total_artists) %}
             {% if i == total_artists-1 %}
@@ -24,11 +24,13 @@
         <div class ="info">
             <b><p>
             {% if lyrics_link == None %}
-                    Lyrics Unavailable | <a class = "new_link" href= {{spotify_url}} target="_blank">Play on Spotify!</a> 
+                    Lyrics Unavailable |
+                    <a class="refresh" HREF="javascript:history.go(0)">🔄</a> |
+                    <a class = "new_link" href= {{spotify_url}} target="_blank">Play on Spotify!</a> 
 
             {% else %}
-                    <a class = "new_link" href = {{lyrics_link}} target="_blank">Click for Lyrics!</a>
-                    |
+                    <a class = "new_link" href = {{lyrics_link}} target="_blank">Click for Lyrics!</a> |
+                    <a class="refresh" HREF="javascript:history.go(0)">🔄</a> |
                     <a class = new_link href= {{spotify_url}} target="_blank">Play on Spotify!</a>
 
             {% endif %}
@@ -50,8 +52,6 @@
                 </audio>
             </div>
         {% endif %}
-        
-        <br>
         
     </div>
     

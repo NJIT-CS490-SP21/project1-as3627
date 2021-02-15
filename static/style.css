@@ -1,19 +1,27 @@
 body{
-    background-color: #b5ffee;
+    background-color: #c4dbff;
 }
 
 .container{
-    background-color: #b5ffee;
+    
     font-family: 'Courier New', monospace;
     margin: 0 auto;
 }
 
 .info{
-     display: flex;
-     justify-content: center;
+    display: flex;
+    justify-content: center;
    
 }
 
 .new_link{
     color: black; 
+}
+
+a.new_link:hover{
+    color: grey;
+}
+
+.refresh{
+    text-decoration: none;
 }
