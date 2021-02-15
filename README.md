@@ -5,6 +5,9 @@ In this project, we'll deploy a simple “music discovery” web app that shows 
 
 This data will be dynamically generated using third-party APIs from Spotify and Genius.
 
+### Final Product:
+https://floating-island-45726.herokuapp.com/
+
 ## Steps to Deploy
 
 ### Clone the repository
